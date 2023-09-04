@@ -114,7 +114,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .footer {
@@ -129,4 +128,4 @@ button:hover {
 .like:hover {
   background: transparent;
   filter: drop-shadow(3px 0 0  #6098dd);
-}
+} 
