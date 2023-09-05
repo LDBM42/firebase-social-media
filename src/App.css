@@ -14,7 +14,7 @@ body {
   color: white;
   margin: 120px 0 0 0;
   font-family: Roboto;
-  background-image: url("../dist/background.png");
+  background-image: url("./assets/background.png");
   background-position: top -100px center;
   background-size: cover;
   background-attachment: fixed;
