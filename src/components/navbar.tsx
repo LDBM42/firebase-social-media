@@ -23,7 +23,7 @@ export const Navbar = () => {
                     <Link to={Path.login}> Login </Link> :
                     <Link to={Path.createpost}> Create Post </Link>}
             </div>
-            <div className='user' style={user!==null ? {background: '#0062da67'} : {}}>
+            <div className='user'>
                 {user && (
                     <>
                         {/* this shows the name of the current user */}

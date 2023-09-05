@@ -69,7 +69,8 @@ export const Post = (props: Props) => {
             // if there is an user, add from the previous state only those likes with likeId diferent from this one 
             if (user) {
                 setlikes((prev) => prev && // if prev is not null
-                    (prev.filter((like) => like.likeId !== likeId)))}
+                    (prev.filter((like) => like.likeId !== likeId)))
+            }
 
         } catch (err) {
             console.log(err);
@@ -82,17 +83,18 @@ export const Post = (props: Props) => {
     }, []);
 
     return (
-        <div className='post'>
-            <h2 className='title'>{post.title}</h2>
-            <p className='description'>{post.description}</p>
-            <div className='footer'>
-                <p>@{post.username}</p>
-                <button className='like' onClick={hasUserLiked ? removeLike : addLike}>
-                    {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}
-                </button>
-                {likes !== null && <p> Likes: {likes.length} </p>}
+        <div className='post-background'>
+            <div className='post'>
+                <h2 className='title'>{post.title}</h2>
+                <p className='description'>{post.description}</p>
+                <div className='footer'>
+                    <p>@{post.username}</p>
+                    <button className='like' onClick={hasUserLiked ? removeLike : addLike}>
+                        {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}
+                    </button>
+                    {likes !== null && <p> Likes: {likes.length} </p>}
+                </div>
             </div>
-
         </div>
     )
 }

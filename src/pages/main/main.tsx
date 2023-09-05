@@ -36,7 +36,7 @@ export const Main = () => {
         getPosts();
     }, []);
 
-    return <div>
+    return <div className="post-container">
         {postsList?.map((post) => <Post key={post.id} post={post} /> )}
     </div>
 }
